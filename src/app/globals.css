@@ -5,6 +5,13 @@
   --foreground: #171717;
 }
 
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-xxl: 1440px;
+  --breakpoint-xlg: 1680px;
+  --breakpoint-maxLg: 1920px;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
