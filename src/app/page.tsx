@@ -3,16 +3,18 @@ import React from "react";
 import Image from "next/image";
 import HeroSection from "@/components/HeroSection";
 import SponsorsSection from "@/components/SponsorSection";
+import NextGenCard from "@/components/NextGenCard";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <div className="lg:px-8 px-5">
-      <div>
+      <>
         <HeroSection />
-      </div>
+      </>
       <div className="relative lg:mx-8 mx-5 lg:my-10 my-4">
         <Image
-          src="/smiling.jpeg" 
+          src="/smiling.jpeg"
           alt="Two friends laughing while using a laptop on a yellow couch"
           width={1000}
           height={1000}
@@ -20,12 +22,15 @@ export default function Home() {
           priority
         />
       </div>
-      <div>
+      <>
         <SponsorsSection />
-      </div>
-      <div>
-        
-      </div>
+      </>
+      <>
+        <NextGenCard />
+      </>
+      <>
+        <Footer />
+      </>
     </div>
   );
 }
