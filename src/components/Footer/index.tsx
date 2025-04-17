@@ -21,7 +21,7 @@ export default function Footer() {
       {linkData.map(({ title, links }) => (
         <div key={title} className={isMobile ? "mb-6" : ""}>
           <h3 className="font-semibold mb-4">{title}</h3>
-          <ul className="space-y-2 text-sm text-gray-400">
+          <ul className="space-y-2 text-sm text-[#EFEFEF]">
             {links.map((link) => (
               <li key={link}>
                 <a href="#">{link}</a>

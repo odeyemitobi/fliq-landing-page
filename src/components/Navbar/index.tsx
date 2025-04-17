@@ -21,8 +21,16 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const buttonProps = {
+    type: "button",
+    onClick: toggleMenu,
+    className:
+      "inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-300 focus:outline-none",
+    "aria-expanded": isMenuOpen ? "true" : "false",
+  } as const;
+
   return (
-    <nav className="bg-black border-b-[0.5px] border-[#3D3D3D] text-white w-full">
+    <nav className="bg-black border-b-[0.5px] border-[#3D3D3D] text-white w-full fixed top-0 z-50">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4">
           <div className="flex items-center">
@@ -71,12 +79,7 @@ const Navbar = () => {
 
           {/* Mobile menu buttons */}
           <div className="md:hidden">
-            <button
-              type="button"
-              onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-300 focus:outline-none"
-              aria-expanded={isMenuOpen ? "true" : "false"}
-            >
+            <button {...buttonProps}>
               <span className="sr-only">Open main menu</span>
               {isMenuOpen ? (
                 <FiX className="h-6 w-6" aria-hidden="true" />

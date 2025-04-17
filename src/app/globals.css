@@ -15,7 +15,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-dm-sans); 
+  --font-sans: var(--font-dm-sans);
   --font-mono: "DM Mono", monospace;
 }
 
@@ -25,3 +25,18 @@ body {
   font-family: var(--font-dm-sans), sans-serif;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow: -moz-scrollbars-none; /* Firefox (older versions) */
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+*::-webkit-scrollbar {
+  width: 0 !important;
+  display: none;
+}

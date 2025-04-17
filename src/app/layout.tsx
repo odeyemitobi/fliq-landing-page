@@ -25,7 +25,7 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <Navbar />
-        <main>{children}</main>
+        <main className="pt-16">{children}</main>
       </body>
     </html>
   );

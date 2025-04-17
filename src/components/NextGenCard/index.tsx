@@ -27,9 +27,8 @@ const features = [
 
 export default function NextGenCard() {
   return (
-    <div className="bg-black text-white py-16">
+    <div className="py-16">
       <div className="container mx-auto px-4">
-        {/* Header */}
         <div className="text-center mb-10">
           <p className="text-[#6A5ACD] text-sm uppercase tracking-wider">
             INTRODUCING
@@ -45,7 +44,6 @@ export default function NextGenCard() {
           </p>
         </div>
 
-        {/* Card Image */}
         <div className="flex justify-center lg:my-24 my-16">
           <Image
             src="/card.svg"
@@ -56,7 +54,6 @@ export default function NextGenCard() {
           />
         </div>
 
-        {/* Features */}
         <div className="lg:flex lg:justify-between lg:space-y-0 space-y-10">
           {features.map(({ icon: Icon, title, text }, index) => (
             <div
